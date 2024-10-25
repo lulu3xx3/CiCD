@@ -72,6 +72,7 @@ public class BaseTest {
     @AfterMethod(alwaysRun = true)
     public void closeDriver(){
         driver.close();
+        System.out.println("HI THIS MIGHT WORK LOL");
     }
 
     public List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException {
@@ -81,6 +82,7 @@ public class BaseTest {
         List<HashMap<String, String>> data = mapper.readValue(jsonContent, new TypeReference<List<HashMap<String, String>>>(){});
 
         return data;
+
 
 
     }
